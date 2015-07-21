@@ -35,12 +35,17 @@ $(document).ready(function(){
 
   $('.test1').click(function(){
     testEnter();
-    $('.testing1').animate({width: '100%', top: '0px'}, 1500);
+    $('.testing1').animate({height: '100%', width: '100%', top: '0px'}, 1500);
+  });
+  $('.test2').click(function(){
+    testEnter();
+    $('.testing2').animate({height: '100%', width: '100%', top: '0px'}, 1500);
   });
 
-
+  /*Close ALL the boxes.*/
   $('.close').click(function(){
-    $('.testing1').animate({width: '1px', top: '-=250px'}, 750);
+    $('.testing1').animate({height: '1px', width: '1px', top: '-=250px'}, 750);
+    $('.testing2').animate({height: '1px', width: '1px', top: '-=250px'}, 750);
     testExit();
   });
 

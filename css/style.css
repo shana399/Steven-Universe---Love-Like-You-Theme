@@ -121,7 +121,8 @@ blockquote{
     .close{
       float: right;
     }
-    .testing1{
+    .testing1,.testing2{
+      height: 1px;
       width: 1px;
       clear: both;
       overflow: hidden;
@@ -129,9 +130,6 @@ blockquote{
       top: -250px;
       margin: 0 auto;
     }
-      .testing1 .post{
-        /**/
-      }
     .warp{
       margin: 0 auto;
       max-width: 500px;
