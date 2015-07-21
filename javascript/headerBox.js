@@ -1,6 +1,8 @@
 $(document).ready(function(){
+  /*
   var heightInitial = $('.test').height();
   console.log(heightInitial);
+*/
 
   $('.test').height('1px');
   console.log($('.test').height());
@@ -12,7 +14,7 @@ $(document).ready(function(){
     */
     console.log('Enter');
     $('.test').fadeIn(250);
-    $('.test').animate({height: heightInitial}, 250);
+    $('.test').animate({height: '100%'}, 250);
   };
 
   var testExit = function(){
