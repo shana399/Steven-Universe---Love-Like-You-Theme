@@ -8,7 +8,7 @@ body{
   font-family: sans-serif;
   font-size: 12px;
   color:#001c0f;
-  background-color: #7af5f3 /* #06c7ce */;
+  background-color: #7af5f3;
   background-image: url("../images/trianglePattern.png");
 }
 a{
@@ -107,7 +107,6 @@ blockquote{
   min-height: 300px !important;
   padding-bottom: 34px;
   position: relative;
-  /*background: fixed;*/
   background-image: url("../images/banner.jpg");
   background-size: cover;
   background-position: top center;
@@ -160,7 +159,6 @@ blockquote{
       .navbar li a:hover{
         background-color: rgba(104, 208, 87, .8);
       }
-
 
 
 #content{
@@ -223,7 +221,6 @@ blockquote{
   padding: 16px 0px;
   margin-bottom: 24px;
   position: relative;
-  /*left: 50px;*/
   list-style: none;
   text-align: center;
   background-color: #06c7ce;
@@ -255,7 +252,6 @@ blockquote{
   .box-25,
   .box-50{
     float: left;
-
     padding: 12px;
   }
   .box-25{
