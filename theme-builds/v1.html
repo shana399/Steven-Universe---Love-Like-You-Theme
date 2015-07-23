@@ -126,22 +126,22 @@ blockquote{
   font-size: 20px;
   margin: 12px auto;
 }
-  .asker,.answerer{
+  .QA > .asker, .QA > .answerer{
     padding: 16px 12px 32px 12px;
     background-color: {color:Asker Background};
     position: relative;
-    z-index: 11px;
+    z-index: 11;
     margin: 16px 0px 36px 0px;
     border-radius: 10px;
   }
   .answerer{
-    background-color: {color:Answerer Background};
+    background-color: {color:Answerer Background} !important;
   }
-    .answerer > a{
+    .answerer > p a, .answerer > ul a, .answerer > ol a{
       color: {color:Ask Text};
       border-bottom: 1px dashed {color:Ask Text};
     }
-      .answerer > a:hover{
+      .answerer > p a:hover, .answerer > ul a:hover, .answerer > ol a:hover{
         background-color: {color:Ask Link Hover};
       }
     .user{
@@ -395,6 +395,7 @@ ol.notes{
         <div class="post">
           <div class="entry">
             <div class="caption">
+              <!--*!*!*!*!*!*!*!*!*!* REMEMBER! Change the ask URL to YOUR username! *!*!*!*!*!*!*!*!-->
               <p><iframe frameborder="0" scrolling="no" width="100%" height="190" src="http://www.tumblr.com/ask_form/su-love-like-you.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]--></p>
             </div><!--END caption-->
           </div><!--END entry-->
@@ -571,7 +572,7 @@ ol.notes{
               {/block:Answerer}
             </div><!--END answerer-->
           </div><!--END QA-->
-          <div class="caption">
+          <div class="caption {block:NotReblog}hidden{/block:NotReblog}">
             {Replies}
           </div>
         <!--END Answer-->
