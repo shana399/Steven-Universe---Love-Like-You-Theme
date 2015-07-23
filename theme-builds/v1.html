@@ -137,11 +137,11 @@ blockquote{
   .QA > .answerer{
     background-color: {color:Answerer Background} !important;
   }
-    .QA > .answerer > p a, .QA > .answerer > ul a, .QA > .answerer > ol a{
+    .QA > .answerer > p a, .QA > .answerer > ul a, .QA > .answerer > ol a, .QA > .answerer > blockquote a{
       color: {color:Ask Text};
       border-bottom: 1px dashed {color:Ask Text};
     }
-      .QA > .answerer > p a:hover, .QA > .answerer > ul a:hover, .QA > .answerer > ol a:hover{
+      .QA > .answerer > p a:hover, .QA > .answerer > ul a:hover, .QA > .answerer > ol a:hover, .QA > .answerer > blockquote a:hover{
         background-color: {color:Ask Link Hover};
       }
     .user{
@@ -569,7 +569,7 @@ ol.notes{
             <div class="answerer">
               {Answer}
               {block:Answerer}
-              <div class="user">{Answerer} <img src="{AnswererPortaitURL-64}" alt="User" /></div>
+              <div class="user">{Answerer} <img src="{AnswererPortraitURL-64}" alt="User" /></div>
               {/block:Answerer}
             </div><!--END answerer-->
           </div><!--END QA-->
