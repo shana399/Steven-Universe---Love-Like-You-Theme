@@ -31,15 +31,27 @@
 
 <!-- Theme Options -->
 {block:Hidden}
+<meta name="text:2nd Header Link Label" content="" />
+<meta name="text:2nd Header Link URL" content="" />
+
+<meta name="text:Footer Link Header" content="" />
+<meta name="text:Footer Link 1 Label" content="" />
+<meta name="text:Footer Link 1 URL" content="">
+<meta name="text:Footer Link 2 Label" content="" />
+<meta name="text:Footer Link 2 URL" content="">
+<meta name="text:Footer Link 3 Label" content="" />
+<meta name="text:Footer Link 3 URL" content="">
+<meta name="text:Footer Link 4 Label" content="" />
+<meta name="text:Footer Link 4 URL" content="">
+<meta name="text:Footer Link 5 Label" content="" />
+<meta name="text:Footer Link 5 URL" content="">
+
 <meta name="if:Google Analytics" content="0" />
 <meta name="text:Google Analytics ID" content="" />
-<meta name="text:Twitter URL" content="" />
-<meta name="text:Instagram URL" content="" />
-<meta name="text:Facebook URL" content="" />
-<meta name="text:YouTube URL" content="" />
-<meta name="text:GitHub URL" content="" />
+
 
 <meta name="image:Banner" content="http://static.tumblr.com/exmsfnm/S3Tnrv1wh/banner.jpg" />
+<meta name="image:Warp Pad" content="http://static.tumblr.com/exmsfnm/kBGnrund4/warppad.png" />
 <meta name="image:Background" content="http://static.tumblr.com/exmsfnm/2vWnrv14w/trianglepattern.png" />
 <meta name="image:Logo Sidebar" content="http://static.tumblr.com/exmsfnm/HnOnrv574/logo.jpeg" />
 <meta name="image:Logo Footer" content="http://static.tumblr.com/exmsfnm/JaAnrv58e/avatar.jpg" />
@@ -288,6 +300,9 @@ ol.notes{
       .caption{
         line-height: 1.5;
       }
+      .caption figure {
+        margin: 0;
+      }
       .tags{
         list-style: none;
         overflow: hidden;
@@ -398,20 +413,29 @@ ol.notes{
           <div class="entry">
             <div class="caption">
               <!--*!*!*!*!*!*!*!*!*!* REMEMBER! Change the ask URL to YOUR username! *!*!*!*!*!*!*!*!-->
-              <p><iframe frameborder="0" scrolling="no" width="100%" height="190" src="http://www.tumblr.com/ask_form/su-love-like-you.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]--></p>
+              <p><iframe frameborder="0" scrolling="no" width="100%" height="190" src="http://www.tumblr.com/ask_form/{Name}.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]--></p>
             </div><!--END caption-->
           </div><!--END entry-->
         </div><!--END post-->
       </div><!--END testing2-->
 
-      <img src="http://static.tumblr.com/exmsfnm/kBGnrund4/warppad.png" class="warp" alt="Warp Pad" />
+      <img src="{image:Warp Pad}" class="warp" alt="Warp Pad" />
 
     </div><!--END test-->
 
     <ul class="navbar">
       <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
+
+      {block:If2ndHeaderLinkLabel}
+      {block:If2ndHeaderLinkURL}
+      <li><a href="{text:2nd Header Link URL}">{text:2nd Header Link Label}</a></li>
+      {/block:If2ndHeaderLinkURL}
+      {/block:If2ndHeaderLinkLabel}
+
+      {block:AskEnabled}
       <li><a class="test2" title="Special">Ask+</a></li>
+      {/block:AskEnabled}
+
       <li><a class="test1" title="Special">Tags+</a></li>
       <li><a href="/archive">Archive</a></li>
     </ul>
@@ -647,12 +671,40 @@ ol.notes{
 
     <div class="box-50">
       <ul class="socialMedia">
-        <li><h6>Social Media</h6></li>
-        <li><a href="{text:Twitter URL}" target="_blank">Twitter</a></li>
-        <li><a href="{text:Instagram URL}" target="_blank">Instagram</a></li>
-        <li><a href="{text:Facebook URL}" target="_blank">Facebook</a></li>
-        <li><a href="{text:YouTube URL}" target="_blank">YouTube</a></li>
-        <li><a href="{text:GitHub URL}" target="_blank">GitHub</a></li>
+        {block:IfFooterLinkHeader}
+        <li><h6>{text:Footer Link Header}</h6></li>
+        {block:IfFooterLinkHeader}
+
+        {block:IfFooterLink1Label}
+        {block:IfFooterLink1URL}
+        <li><a href="{text:Footer Link 1 URL}" target="_blank">{text:Footer Link 1 URL}</a></li>
+        {/block:IfFooterLink1URL}
+        {/block:IfFooterLink1Label}
+
+        {block:IfFooterLink2Label}
+        {block:IfFooterLink2URL}
+        <li><a href="{text:Footer Link 2 URL}" target="_blank">{text:Footer Link 2 URL}</a></li>
+        {/block:IfFooterLink2URL}
+        {/block:IfFooterLink2Label}
+
+        {block:IfFooterLink3Label}
+        {block:IfFooterLink3URL}
+        <li><a href="{text:Footer Link 3 URL}" target="_blank">{text:Footer Link 3 URL}</a></li>
+        {/block:IfFooterLink3URL}
+        {/block:IfFooterLink3Label}
+
+        {block:IfFooterLink4Label}
+        {block:IfFooterLink4URL}
+        <li><a href="{text:Footer Link 4 URL}" target="_blank">{text:Footer Link 4 URL}</a></li>
+        {/block:IfFooterLink4URL}
+        {/block:IfFooterLink4Label}
+
+        {block:IfFooterLink5Label}
+        {block:IfFooterLink5URL}
+        <li><a href="{text:Footer Link 5 URL}" target="_blank">{text:Footer Link 5 URL}</a></li>
+        {/block:IfFooterLink5URL}
+        {/block:IfFooterLink5Label}
+
       </ul>
     </div><!--END box-50-->
     <div class="copyright">
