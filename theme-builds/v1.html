@@ -34,6 +34,15 @@
 <meta name="text:2nd Header Link Label" content="" />
 <meta name="text:2nd Header Link URL" content="" />
 
+<meta name="text:Header Special Link Label" content="Tags+" />
+<meta name="text:Header Special Content" content="
+<p>I'm the warp master!</p>
+<h4>Tags</h4>
+<ul>
+  <li><a href='/tagged/Steven-Universe'>Steven Universe</a></li>
+</ul>
+" />
+
 <meta name="text:Footer Link Header" content="" />
 <meta name="text:Footer Link 1 Label" content="" />
 <meta name="text:Footer Link 1 URL" content="">
@@ -272,7 +281,7 @@ ol.notes{
     left: 50px;
     width: 200px;
     padding: 12px;
-    border-radius: 20px;
+    border-radius: 5px;
   }
     .logo{
       width: 100px;
@@ -398,11 +407,7 @@ ol.notes{
         <div class="post">
           <div class="entry">
             <div class="caption">
-              <p>I'm the warp master!</p>
-              <h4>Tags</h4>
-              <ul>
-                <li><a href="/tagged/Steven-Universe">Steven Universe</a>
-              </ul>
+              {text:Header Special Content}
             </div><!--END caption-->
           </div><!--END entry-->
         </div><!--END post-->
@@ -436,7 +441,7 @@ ol.notes{
       <li><a class="test2" title="Special">Ask+</a></li>
       {/block:AskEnabled}
 
-      <li><a class="test1" title="Special">Tags+</a></li>
+      <li><a class="test1" title="Special">{text:Header Special Link Label}</a></li>
       <li><a href="/archive">Archive</a></li>
     </ul>
   </div><!--END conainer-->
@@ -562,7 +567,9 @@ ol.notes{
         {block:Audio}
         <!--Audio-->
           {block:AudioEmbed}
+          <div class="media">
             {AudioEmbed}
+          </div>
           {/block:AudioEmbed}
           {block:Caption}
           <div class="caption">
