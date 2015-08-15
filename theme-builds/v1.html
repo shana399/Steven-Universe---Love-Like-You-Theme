@@ -630,10 +630,9 @@ ol.notes{
         <!--END Post Notes-->
         {/block:PostNotes}
       </div><!--END entry-->
+      {block:Date}
       <div class="info">
-        {block:Date}
         <a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonthWithZero}/{Year}</a><br />
-        {/block:Date}
 
         {block:RebloggedFrom}
         Via: <a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a><br />
@@ -653,6 +652,7 @@ ol.notes{
         {ReblogButton color="Black"}
         {LikeButton color="Black"}
       </div><!--END info-->
+      {/block:Date}
     </div><!--END post-->
     {block:Posts}
     <!--END Postings-->
